@@ -13,18 +13,21 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 100vh;
+            height: 100vh; /* Ensure full height */
+            width: 100vw;  /* Ensure full width */
         }
 
         /* Video background */
         video {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Makes the video fill the screen */
-            z-index: -1; /* Keeps the video in the background */
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%); /* Keeps the video in the background */
         }
 
         /* PDF container styling */
@@ -34,11 +37,12 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
-            width: 80%;
+            width: 90%;
             max-width: 800px;
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Timer styling */
@@ -55,6 +59,7 @@
             background: transparent;
             padding: 10px 20px;
             border-radius: 10px;
+            text-align: center; /* Center text for better appearance */
         }
 
         /* Responsive styling */
@@ -64,6 +69,7 @@
             }
             #pdf-container {
                 width: 90%;
+                padding: 15px;
             }
         }
 
@@ -72,7 +78,7 @@
                 font-size: 18px;
             }
             #pdf-container {
-                width: 100%;
+                width: 95%;
                 padding: 10px;
             }
         }
