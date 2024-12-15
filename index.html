@@ -18,13 +18,11 @@
         }
         
         video {
-            position: absolute; /* Absolute positioning */
-            top: 0;
-            left: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            object-fit: fill; /* Ensure it covers the entire area */
-            z-index: -1; /* Keep the video behind the content */
+            position:initial; /* Absolute positioning */
+            width:100vw; /* Ensure the video covers the width */
+            height:100vh; /* Ensure the video covers the height */
+            object-fit: inherit; /* Maintain aspect ratio */
+            z-index: -1; /* Keep the video in the background */
         }
         
         #pdf-container {
