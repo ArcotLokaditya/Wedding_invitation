@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
     <style>
-        body {
+         body {
             margin: 0;
             overflow: hidden;
             font-family: Arial, sans-serif;
@@ -13,39 +13,33 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 100vh; /* Ensure full height */
-            width: 100vw;  /* Ensure full width */
+            height: 100vh; /* Use viewport height */
+            width: 100vw;  /* Use viewport width */
         }
-
-        /* Video background */
+        
         video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-            transform: translate(-50%, -50%); /* Keeps the video in the background */
+            position: absolute; /* Absolute positioning */
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            object-fit: fill; /* Ensure it covers the entire area */
+            z-index: -1; /* Keep the video behind the content */
         }
-
-        /* PDF container styling */
+        
         #pdf-container {
             position: absolute;
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
-            width: 90%;
+            width: 80%;
             max-width: 800px;
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
-        /* Timer styling */
+        
         #timer {
             position: absolute;
             top: 20px;
@@ -59,9 +53,8 @@
             background: transparent;
             padding: 10px 20px;
             border-radius: 10px;
-            text-align: center; /* Center text for better appearance */
         }
-
+        
         /* Responsive styling */
         @media (max-width: 768px) {
             #timer {
@@ -69,16 +62,15 @@
             }
             #pdf-container {
                 width: 90%;
-                padding: 15px;
             }
         }
-
+        
         @media (max-width: 480px) {
             #timer {
                 font-size: 18px;
             }
             #pdf-container {
-                width: 95%;
+                width: 100%;
                 padding: 10px;
             }
         }
